@@ -10,9 +10,14 @@
       "name": "lacuna-research",
       "displayName": "Lacuna Research",
       "source": "./",
-      "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, and who works on what.",
+      "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, who works on what, and cited literature reviews.",
       "category": "productivity",
-      "tags": ["research", "machine-learning", "papers", "literature-review"]
+      "tags": [
+        "research",
+        "machine-learning",
+        "papers",
+        "literature-review"
+      ]
     }
   ]
 }
