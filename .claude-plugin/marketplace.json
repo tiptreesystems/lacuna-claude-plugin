@@ -1,0 +1,18 @@
+{
+  "name": "lacuna-research",
+  "description": "Lacuna Research connector and ML research skills for Claude.",
+  "owner": {
+    "name": "Tiptree Systems",
+    "url": "https://tiptreesystems.com"
+  },
+  "plugins": [
+    {
+      "name": "lacuna-research",
+      "displayName": "Lacuna Research",
+      "source": "./",
+      "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, and who works on what.",
+      "category": "productivity",
+      "tags": ["research", "machine-learning", "papers", "literature-review"]
+    }
+  ]
+}

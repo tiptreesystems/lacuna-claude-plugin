@@ -1,0 +1,24 @@
+{
+  "name": "lacuna-research",
+  "displayName": "Lacuna Research",
+  "version": "0.1.0",
+  "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, and who works on what.",
+  "author": {
+    "name": "Tiptree Systems",
+    "url": "https://tiptreesystems.com"
+  },
+  "homepage": "https://lacuna.tiptreesystems.com/mcp",
+  "repository": "https://github.com/tiptreesystems/lacuna-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "machine-learning",
+    "papers",
+    "literature-review",
+    "arxiv",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "icon": "./.claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://tiptreesystems.com/privacy-policy"
+}

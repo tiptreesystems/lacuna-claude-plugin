@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lacuna-research": {
+      "type": "http",
+      "url": "https://lacuna.tiptreesystems.com/api/mcp"
+    }
+  }
+}
