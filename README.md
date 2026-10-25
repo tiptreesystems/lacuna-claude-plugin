@@ -1,6 +1,6 @@
 # Lacuna Research plugin for Claude
 
-Lacuna is a knowledge graph of machine learning and AI research: 2.3 million papers from major ML venues, arXiv and OpenReview, the researchers behind them, and the research directions they form. This plugin connects Claude to Lacuna and adds four skills:
+Lacuna is a knowledge graph of machine learning and AI research: 2.3 million papers from major ML venues, arXiv and OpenReview, the researchers behind them, and the research directions they form. This plugin connects Claude to Lacuna and adds five skills:
 
 | Skill | Use it for |
 |---|---|
@@ -8,6 +8,7 @@ Lacuna is a knowledge graph of machine learning and AI research: 2.3 million pap
 | `lacuna-novelty-check` | Whether an idea has been done, and the closest prior work |
 | `lacuna-paper-context` | A paper explained and placed among related work, with its code and data |
 | `lacuna-find-researchers` | Who works on a topic, similar researchers, who works on what at an institution |
+| `lacuna-literature-review` | A cited literature review or related-work section, with date bounds and required sections |
 
 Every answer links to the Lacuna page it came from. The connector is read-only and needs no account.
 

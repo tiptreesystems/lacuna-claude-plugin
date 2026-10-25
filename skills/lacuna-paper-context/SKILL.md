@@ -7,21 +7,21 @@ description: "Use when the user gives an ML/AI paper (arXiv ID or URL, OpenRevie
 
 ## Workflow
 
-1. **Find the paper.** If you have an arXiv ID, OpenReview or Lacuna URL, pass it straight to `get_paper`. With only a title, call `search_lacuna` with `search_type="paper"` and the exact title, then pick the matching result (check authors and year).
-2. **Read it.** Call `get_paper` with the default `view="context"`. This gives the summary, authors, venue, a figure preview, other versions and linked resources (code, datasets, models).
-3. **Place it.** Use the paper's research directions and related papers from the context. Call `get_direction` on its main direction to say what line of work it belongs to and what it adds. Use `view="neighbors"` on `get_paper` if you need more related papers.
-4. **Code and data.** If the user asks, list the linked resources and call `get_resource` on the main one for details (stars, license, what it contains).
+1. **Find it once.** With an arXiv ID, OpenReview, arXiv or Lacuna URL, pass it straight to `get_paper`. With only a title, the only search is `search_lacuna(search_type="paper", query=<exact title>)`, with no extra keywords. If a top result's title matches, call `get_paper` on it and do not search again.
+2. **Read the compact context first.** `get_paper` with the default `view="context"` gives the summary, authors, venue, figure preview, other versions and linked resources. Ask for one more specific view only if the context is not enough: `view="concepts"` for key concepts, `view="neighbors"` for related papers, `view="blog"` for the longer summary. Do not request several views speculatively.
+3. **Place it.** Use the paper's directions and neighbours from those payloads. Do not run a direction search after fetching the paper; call `get_direction` on its main direction only if you need to describe that line of work.
+4. **Code and data.** If asked, list the linked resources and call `get_resource` on the main one.
+5. **Other versions.** To read another version (workshop vs conference, revisions), call `get_paper` with that version's id from the returned version list.
 
 ## Output
 
-- What the paper does, in two or three sentences: the problem, the approach, the main result.
-- Where it sits: the Lacuna direction(s) and the closest related papers, with what it changes relative to them.
-- Versions (workshop vs conference, arXiv revisions) when there is more than one.
-- Code, datasets and models, if any.
+- What the paper does: problem, approach, main result, in two or three sentences.
+- Where it sits: its direction(s) and closest related papers, and what it changes relative to them.
+- Versions, code, datasets and models, when present.
 - Lacuna links for the paper, its direction and every related paper mentioned.
 
 ## Rules
 
-- Use the paper's own claims for results; mark anything from Lacuna's generated summary as a summary.
-- Cite the Lacuna URL the tools return. Do not invent URLs or arXiv IDs.
-- If the paper is not in Lacuna, say so and fall back to other sources.
+- Use the paper's own claims for results; mark Lacuna's generated summary as a summary.
+- Copy complete Lacuna URLs exactly; never shorten or invent URLs or arXiv IDs.
+- If the paper is not in Lacuna, say so and use other sources.

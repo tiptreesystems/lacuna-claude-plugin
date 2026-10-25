@@ -2,7 +2,7 @@
   "name": "lacuna-research",
   "displayName": "Lacuna Research",
   "version": "0.1.0",
-  "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, and who works on what.",
+  "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, who works on what, and cited literature reviews.",
   "author": {
     "name": "Tiptree Systems",
     "url": "https://tiptreesystems.com"
