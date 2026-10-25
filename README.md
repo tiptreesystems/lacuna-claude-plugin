@@ -32,6 +32,10 @@ Every answer links to the Lacuna page it came from. The connector is read-only a
 - What is arXiv 2603.01092 about, and what is it related to?
 - Who works on world models at Mila?
 
+## What it sends
+
+The plugin has no hooks, scripts or local servers. Its only network access is the Lacuna MCP server at `https://lacuna.tiptreesystems.com/api/mcp`, which receives the search queries and paper, author, direction, venue, institution and hypothesis IDs that Claude passes to its tools. The server is read-only. It needs no account and stores no personal data beyond standard request logs, as described in the privacy policy.
+
 ## Support
 
 lacuna@tiptreesystems.com · [Privacy policy](https://tiptreesystems.com/privacy-policy)
