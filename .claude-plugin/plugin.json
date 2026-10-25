@@ -20,5 +20,8 @@
   ],
   "skills": "./skills/",
   "icon": "./.claude-plugin/icon.png",
-  "privacyPolicyUrl": "https://tiptreesystems.com/privacy-policy"
+  "privacyPolicyUrl": "https://tiptreesystems.com/privacy-policy",
+  "termsOfServiceUrl": "https://tiptreesystems.com/terms",
+  "supportUrl": "https://tiptreesystems.com/contact",
+  "documentationUrl": "https://lacuna.tiptreesystems.com/mcp"
 }
