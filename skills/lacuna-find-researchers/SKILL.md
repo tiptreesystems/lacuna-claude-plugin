@@ -1,6 +1,6 @@
 ---
 name: lacuna-find-researchers
-description: "Use when the user wants to find ML/AI researchers or understand one: who works on a topic, researchers similar to someone, possible collaborators or reviewers, who works on what at an institution, or whether a person has worked on a topic (e.g. 'who works on world models at Mila', 'researchers similar to Chelsea Finn', 'has X worked on RL'). Uses the Lacuna Research tools. Covers research output only, not biographies or contact details."
+description: "Use when the user wants to find ML/AI researchers or understand one: who works on a topic, researchers similar to someone, possible collaborators or reviewers, who works on what at an institution, who publishes at a venue and on what, or whether a person has worked on a topic (e.g. 'who is working on test-time adaptation, and what have they published', 'who works on world models at Mila', 'researchers similar to Chelsea Finn', 'who publishes most at CoRL', 'has X worked on RL'). Uses the Lacuna Research tools. Covers research output only, not biographies or contact details."
 ---
 
 # Find ML researchers with Lacuna
@@ -16,6 +16,8 @@ Pick one route.
 **Has X worked on topic T?** Find X, then page through `get_author_papers` (keep the same limit and increase `offset` by it) and check `get_author_directions`. Never answer "no" from the truncated context slice or one page.
 
 **Who works on what at an institution.** `search_lacuna(search_type="institution", query=<name>)`, then `get_institution_context`, and page `get_institution_authors` if the capped list is not enough. Combine with a topic route to find who there works on the topic.
+
+**Who publishes at a venue, and on what.** `search_lacuna(search_type="venue", query=<acronym>)` with the standard acronym (NeurIPS, ICML, ICLR, CVPR, ACL); expanded conference names may not be indexed. Venue keys are opaque hashes, so pass the key or venue URL from that result to `get_venue_context`, never the acronym. Pass `year` when the user asked about one edition. Use its top authors, top directions and recent-activity slice. To list a venue's papers on a topic, run `search_lacuna(search_type="paper", query=<topic>, venue=<acronym>)`.
 
 ## Output
 

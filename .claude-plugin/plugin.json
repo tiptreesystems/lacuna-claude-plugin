@@ -1,8 +1,8 @@
 {
   "name": "lacuna-research",
   "displayName": "Lacuna Research",
-  "version": "0.1.0",
-  "description": "Map ML research with Lacuna: what has been tried on a topic and what is open, whether an idea has been done, a paper in context, who works on what, and cited literature reviews.",
+  "version": "0.2.0",
+  "description": "A knowledge graph of machine learning and AI research: 2.3 million papers from arXiv, OpenReview and major ML venues, 215,000 authors, 6,200 venues and 28,000 research directions. Use it for literature reviews, related-work sections, and finding out who is working on what.",
   "author": {
     "name": "Tiptree Systems",
     "url": "https://tiptreesystems.com"
